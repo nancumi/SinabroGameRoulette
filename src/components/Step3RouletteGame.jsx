@@ -197,7 +197,7 @@ export default function Step3RouletteGame({
         {/* Roulette interactive canvas */}
         <div
           onClick={!isSpinning && !isAllCompleted ? handleSpin : undefined}
-          className={`cursor-pointer transition-transform ${
+          className={`w-full flex items-center justify-center cursor-pointer transition-transform ${
             !isSpinning && !isAllCompleted ? 'hover:scale-[1.01] active:scale-95' : ''
           }`}
           title={isSpinning ? '회전 중...' : '룰렛을 눌러 돌리기'}

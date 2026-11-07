@@ -208,11 +208,11 @@ export default function RouletteCanvas({
   }, [items, rotation, isSpinning, onPointerTick, size]);
 
   return (
-    <div className="relative flex items-center justify-center p-2 select-none">
+    <div className="relative w-full max-w-[340px] aspect-square flex items-center justify-center p-1 select-none mx-auto">
       <canvas
         ref={canvasRef}
-        style={{ width: size, height: size }}
-        className="max-w-full h-auto drop-shadow-2xl transition-transform"
+        style={{ width: '100%', height: '100%', aspectRatio: '1 / 1' }}
+        className="w-full h-full aspect-square drop-shadow-2xl transition-transform block"
       />
     </div>
   );
