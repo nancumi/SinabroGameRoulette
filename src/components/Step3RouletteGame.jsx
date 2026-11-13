@@ -6,6 +6,7 @@ import {
   Award,
   ListOrdered,
   Flame,
+  X,
 } from 'lucide-react';
 import RouletteCanvas from './RouletteCanvas';
 import { sound } from '../utils/sound';
@@ -329,6 +330,19 @@ export default function Step3RouletteGame({
             onClick={(e) => e.stopPropagation()}
             className="w-full max-w-md bg-gradient-to-b from-[#18233c] to-[#0f172a] border border-amber-500/40 rounded-3xl p-5 sm:p-6 shadow-2xl relative max-h-[90vh] flex flex-col cursor-default"
           >
+            {/* 우측 상단 닫기 (X) 버튼 */}
+            <button
+              type="button"
+              onClick={() => {
+                setShowFinalSummary(false);
+                sound.playClick();
+              }}
+              aria-label="결과 모달 닫기"
+              className="absolute top-4 right-4 p-1.5 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800/80 transition-colors cursor-pointer"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
             <div className="text-center mb-4">
               <div className="w-10 h-10 mx-auto mb-2 rounded-2xl bg-amber-500/20 border border-amber-400/40 flex items-center justify-center">
                 <Trophy className="w-5 h-5 text-amber-400" />
